@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<form action="/scans/newscan" method="POST">
+    {% csrf_token %}
+    <input name="analysisname" placeholder="Analysis Name">
+    <input name="repositoryurl" placeholder="Repository URL"/>
+    <button type="submit">Scan</button>
+</form>
+{% endblock content %}
